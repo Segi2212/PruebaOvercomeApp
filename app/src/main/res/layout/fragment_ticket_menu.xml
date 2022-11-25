@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ticket_menu"
+    android:background="@color/Fondo">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline14"
+            app:layout_constraintStart_toStartOf="@+id/guideline13"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:paddingVertical="20dp">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent=".0" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="1" />
+
+                    <Button
+                        android:id="@+id/btnEditar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/Azul"
+                        android:text="Editar"
+                        android:textColor="@color/white"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline12"
+                        app:layout_constraintStart_toStartOf="@+id/guideline11"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/btnCancelar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:backgroundTint="@color/Azul"
+                        android:text="Cancelar"
+                        android:visibility="gone"
+                        android:textColor="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline12"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/btnAceptar"
+                        app:layout_constraintTop_toBottomOf="@+id/btnArchivar" />
+
+                    <Button
+                        android:id="@+id/btnAceptar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:backgroundTint="@color/Azul"
+                        android:text="Aceptar"
+                        android:visibility="gone"
+                        android:textColor="@color/white"
+                        app:layout_constraintEnd_toStartOf="@+id/btnCancelar"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@+id/guideline11"
+                        app:layout_constraintTop_toBottomOf="@+id/btnArchivar" />
+
+                    <Button
+                        android:id="@+id/btnArchivar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:backgroundTint="@color/Azul"
+                        android:text="Archivar"
+                        android:textColor="@color/white"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline12"
+                        app:layout_constraintStart_toStartOf="@+id/guideline11"
+                        app:layout_constraintTop_toBottomOf="@+id/btnEditar" />
+
+                    <Button
+                        android:id="@+id/btnAceptarInci"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:backgroundTint="@color/Azul"
+                        android:text="Aceptar incidencia"
+                        android:textColor="@color/white"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline12"
+                        app:layout_constraintStart_toStartOf="@+id/guideline11"
+                        app:layout_constraintTop_toBottomOf="@+id/btnAceptar" />
+
+                    <Button
+                        android:id="@+id/btnAbandonarInci"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Abandonar incidencia"
+                        android:layout_marginTop="20dp"
+                        android:backgroundTint="@color/Azul"
+                        android:textColor="@color/white"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/guideline11"
+                        app:layout_constraintTop_toBottomOf="@+id/btnAceptarInci" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".1" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".9" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
